@@ -23,16 +23,11 @@ func =~ (value : String, pattern : String) -> RegexMatchResult {
     var matches : Array<String> = []
     re!.enumerateMatchesInString(value, options: moptions, range: all) {
         (result : NSTextCheckingResult!, flags : NSMatchingFlags, ptr : UnsafeMutablePointer<ObjCBool>) in
-        /*
         for r in 0..<result.numberOfRanges {
             let range = result.rangeAtIndex(r)
             let string = nsstr.substringWithRange(range)
             matches.append(string)
         }
-        */
-        
-        let string = nsstr.substringWithRange(result.range)
-        matches.append(string)
     }
     return RegexMatchResult(items: matches)
 }
