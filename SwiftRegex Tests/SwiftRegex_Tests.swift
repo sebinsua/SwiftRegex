@@ -57,6 +57,20 @@ class SwiftRegex_Tests: XCTestCase {
         XCTAssertFalse(value =~ pattern2, "LogicValue (1/2)")
     }
     
+    func testRangesMatchingTogether() {
+        let value = "Hello, sir! How do you do?"
+        
+        let pattern = "(?:[A-Z]+[, !?a-z]*)+"
+        
+        let matches = value =~ pattern
+        var count = 0
+        for m in matches {
+            count++
+        }
+
+        XCTAssertEqual(count, 1, "count of range matches")
+    }
+    
     func testGroups() {
         let value = "532abc1🌠🌠火"
         
