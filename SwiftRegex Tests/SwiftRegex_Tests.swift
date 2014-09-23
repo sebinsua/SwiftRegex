@@ -56,6 +56,25 @@ class SwiftRegex_Tests: XCTestCase {
         XCTAssert(value =~ pattern, "LogicValue (1/2)")
         XCTAssertFalse(value =~ pattern2, "LogicValue (1/2)")
     }
+    
+    func testGroups() {
+        let value = "532abc1🌠🌠火"
+        
+        let pattern = "(?:\\d+)(abc)\\d?([\\u6620-\\U0001F500]*)"
+        
+        let matches = value =~ pattern
+        
+        var count = 0
+        for m in matches {
+            count++
+        }
+        
+        XCTAssertEqual(count, 3, "count of selected groups")
+        XCTAssertEqual(matches[0], value, "matched the whole regex")
+        XCTAssertEqual(matches[1], "abc", "matched abc")
+        XCTAssertEqual(matches[2], "🌠🌠火", "matched 🌠🌠火")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {

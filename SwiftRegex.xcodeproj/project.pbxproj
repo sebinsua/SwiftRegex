@@ -139,7 +139,7 @@
 		3726EE841943B8610005DBFD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Gregory Todd Williams";
 				TargetAttributes = {
 					3726EE8B1943B8610005DBFD = {
@@ -292,6 +292,7 @@
 		3726EEA31943B8AB0005DBFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -310,6 +311,7 @@
 		3726EEA41943B8AB0005DBFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -340,6 +342,7 @@
 				3726EE951943B8610005DBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3726EEA21943B8AB0005DBFD /* Build configuration list for PBXNativeTarget "SwiftRegex Tests" */ = {
 			isa = XCConfigurationList;
@@ -348,6 +351,7 @@
 				3726EEA41943B8AB0005DBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
